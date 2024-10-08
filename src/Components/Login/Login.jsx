@@ -6,7 +6,7 @@ import "./Login.css"
 
 const Login = () => {
 
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -16,8 +16,8 @@ const Login = () => {
         setIsLoading(true); // Mostrar carregamento
 
         try {
-            const response = await axios.post('http://localhost:5000/api/login', {
-                username,
+            const response = await axios.post('http://localhost:8080/auth/login', {
+                email,
                 password
             });
 
@@ -38,7 +38,7 @@ const Login = () => {
                 <h1>Login</h1>
                 <div className="input-field">
                     <input type="email" placeholder='E-mail'
-                        onChange={(e) => setUsername(e.target.value)} />
+                        onChange={(e) => setEmail(e.target.value)} />
                     <FaUser className="icon" />
                 </div>
                 <div className="input-field">

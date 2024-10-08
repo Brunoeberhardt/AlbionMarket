@@ -1,4 +1,4 @@
-import express from 'express';
+/*import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import bodyParser from 'body-parser';
@@ -58,4 +58,4 @@ app.post('/api/login', async (req, res) => {
 
 app.listen(PORT, () => {
     console.log('Server is running on port ${PORT}');
-});
+});*/
